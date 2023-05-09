@@ -11,6 +11,7 @@ const cors = require('cors')
  
 
 const connect_db = require('./database/dbConnect')
+const Router = require('./routes/Router')
 
  
 
@@ -29,6 +30,8 @@ app.use(cors())
 app.use(express.json());
 
 app.use(express.static('public'))
+
+app.use(Router)
 
  
 
